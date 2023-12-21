@@ -12,7 +12,7 @@ const BagSummary = () => {
   })
 
   const CONVENIENCE_FEES = 99;
-  const BLANK_PRICE = 0
+  const NO_CONVENIENCE_FEES = 0
     let totalItem = bagItemsIds.length;
     let totalMRP = 0;
     let totalDiscount = 0;
@@ -23,8 +23,11 @@ const BagSummary = () => {
     });
   
     let finalPayment = 0
-    if(totalMRP === 0){
+      if(finalItems >= 1){
        finalPayment = totalMRP - totalDiscount + CONVENIENCE_FEES;
+      }else{
+      finalPayment = totalMRP - totalDiscount + NO_CONVENIENCE_FEES;
+
     }
 
     
@@ -42,7 +45,7 @@ const BagSummary = () => {
   </div>
   <div className="price-item">
     <span className="price-item-tag">Convenience Fee</span>
-    <span className="price-item-value">{totalMRP === 0 ? BLANK_PRICE : CONVENIENCE_FEES}</span>
+    <span className="price-item-value">{totalMRP === 0 ? NO_CONVENIENCE_FEES : CONVENIENCE_FEES}</span>
   </div>
   <hr />
   <div className="price-footer">

@@ -18,14 +18,14 @@ const Header = () => {
         </Link>
       </div>
       <nav className="nav_bar">
-        <Link to="#">Men</Link>
-        <Link to="#">Women</Link>
-        <Link to="#">Kids</Link>
-        <Link to="#">Home & Living</Link>
-        <Link to="#">Beauty</Link>
-        <Link to="#">
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">Kids</a>
+        <a href="#">Home & Living</a>
+        <a href="#">Beauty</a>
+        <a href="#">
           Studio <sup>New</sup>
-        </Link>
+        </a>
       </nav>
       <div className="search_bar">
         <span className="material-symbols-outlined search_icon">search</span>
